@@ -35,6 +35,12 @@ export default function Nav({ setOpen, open }) {
       </div>
       <div className="mx-auto max-w-3xl flex flex-col gap-10 items-center py-24">
         <button
+          onClick={() => handleClick("/")}
+          className="border-2 border-black bg-carnation-200 text-4xl font-bold py-8 block w-7/12 custom-shadow"
+        >
+          Home
+        </button>
+        <button
           onClick={() => handleClick("/about")}
           className="border-2 border-black bg-carnation-400 text-4xl font-bold py-8 block w-7/12 custom-shadow"
         >
