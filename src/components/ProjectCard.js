@@ -3,18 +3,20 @@ import josh from "../../public/josh.jpg";
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="relative border-2 border-black custom-shadow flex flex-col">
+    <div className="relative border-2 border-black large-custom-shadow flex flex-col">
       <h3 className="absolute bg-champagne-300 py-1 px-4 uppercase border-b-2 border-r-2 text-lg border-black">
         {project.agency}
       </h3>
 
       <div>
         <Image
-          src={`http:${project.screenshot.fields.file.url}`}
-          width={project.screenshot.fields.file.details.image.width}
-          height={project.screenshot.fields.file.details.image.height}
+          src={`http:${project.image.source}`}
+          width={project.image.width}
+          height={project.image.height}
           className="w-full aspect-video object-cover"
           alt={project.title}
+          placeholder="blur"
+          blurDataURL={project.blurData}
         />
       </div>
       <div className="relative flex flex-col h-full">
@@ -29,7 +31,7 @@ export default function ProjectCard({ project }) {
         </div>
         <div className="mt-auto">
           <a
-            href="https://google.com"
+            href={project.url}
             className="block border-t-2 text-center text-2xl tracking-wide font-semibold border-black bg-carnation-400 py-4 px-6"
           >
             See the site

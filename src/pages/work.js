@@ -1,14 +1,39 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
 import getAllWork from "@/utils";
+import { getPlaiceholder } from "plaiceholder";
 
 export async function getServerSideProps() {
   const allWork = await getAllWork();
   const workFields = allWork.map((entry) => entry.fields);
 
+  const workList = await Promise.all(
+    workFields.map(async (project) => {
+      const { base64 } = await getPlaiceholder(
+        `https:${project.screenshot.fields.file.url}`
+      );
+
+      const item = {
+        title: project.title,
+        agency: project.agency,
+        tech: project.tech,
+        url: project.url,
+        description: project.description,
+        image: {
+          source: project.screenshot.fields.file.url,
+          width: project.screenshot.fields.file.details.image.width,
+          height: project.screenshot.fields.file.details.image.height,
+        },
+        blurData: base64,
+      };
+
+      return item;
+    })
+  );
+
   return {
     props: {
-      work: workFields,
+      work: workList,
     },
   };
 }

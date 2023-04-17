@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header({ setOpen }) {
   return (
-    <header className="border-4 border-t-0 border-black px-4 py-6 flex items-center justify-between">
+    <header className="border-4 lg:border-t-0 border-black px-4 py-6 flex items-center justify-between">
       <Link href="/">
         <div className="text-3xl lg:text-5xl font-semibold text-champagne-100 text-border tracking-widest">
           <span className="text-carnation-400">J</span>

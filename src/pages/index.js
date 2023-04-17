@@ -15,7 +15,7 @@ export default function Home() {
         <div className="absolute z-10 -bottom-12 -right-32 lg:right-12 lg:-bottom-16">
           <Image src={waves} alt="wave decoration" />
         </div>
-        <div className="text-center max-w-4xl mx-auto border-2 border-black bg-champagne-100 py-8 px-4 custom-shadow relative z-20">
+        <div className="text-center max-w-4xl mx-auto border-2 border-black bg-champagne-100 py-8 px-4 large-custom-shadow relative z-20">
           <h1 className="text-5xl lg:text-8xl font-semibold tracking-wider">
             Hey 👋, <br /> I'm Josh.
           </h1>

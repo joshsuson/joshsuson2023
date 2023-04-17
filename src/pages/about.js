@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import josh from "../../public/josh.jpg";
+import newJosh from "../../public/josh.jpg";
 import yellowStar from "../../public/yellow-star.png";
 import greenStar from "../../public/green-star.png";
 import Link from "next/link";
@@ -20,15 +20,16 @@ export default function AboutPage() {
         <div className="hidden xl:block absolute bottom-48 left-[28.5rem] z-10">
           <Image src={greenStar} className="w-20" alt="green star decoration" />
         </div>
-        <div className="border-4 border-black custom-shadow lg:absolute z-20 lg:w-[500px] aspect-square object-contain">
+        <div className="border-4 border-black large-custom-shadow lg:absolute z-20 lg:w-[500px] aspect-square object-contain">
           <Image
             priority
-            src={josh}
+            src={newJosh}
             alt="Photo of Josh sitting with his laptop"
             className="object-cover aspect-square object-right"
+            placeholder="blur"
           />
         </div>
-        <div className="bg-champagn-100 text-center lg:text-left border-2 border-black custom-shadow px-4 py-8 lg:ml-64 mt-12 lg:pl-72">
+        <div className="bg-champagn-100 text-center lg:text-left border-2 border-black large-custom-shadow px-4 py-8 lg:ml-64 mt-12 lg:pl-72">
           <h1 className="text-4xl font-semibold mb-4">Hello, I'm Josh Suson</h1>
           <p className="text-2xl mb-4">
             I am a Frontend Web Developer that focuses on React and other
