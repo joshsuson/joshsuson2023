@@ -1,14 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import Layout from "@/components/Layout";
 import Image from "next/image";
 import newJosh from "../../public/josh.jpg";
 import yellowStar from "../../public/yellow-star.png";
 import greenStar from "../../public/green-star.png";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function AboutPage() {
   return (
     <>
+      <Head>
+        <title>All about me ⭐</title>
+      </Head>
       <div className="relative my-24 px-4 lg:px-0">
         <div className="absolute z-30 -top-12 -left-12">
           <Image

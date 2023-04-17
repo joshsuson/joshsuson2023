@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import grid from "../../public/grid.png";
 import waves from "../../public/waves.png";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Josh Suson 👋</title>
+      </Head>
       <div className="relative px-4 lg:px-0 mt-12">
         <div className="absolute z-10 -top-10 -left-16 lg:left-20 lg:-top-12">
           <Image src={grid} alt="grid decoration" />

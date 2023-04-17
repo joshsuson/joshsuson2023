@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
 import getAllWork from "@/utils";
 import { getPlaiceholder } from "plaiceholder";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const allWork = await getAllWork();
@@ -41,6 +41,9 @@ export async function getStaticProps() {
 export default function WorkPage({ work }) {
   return (
     <>
+      <Head>
+        <title>Some of my work 💻</title>
+      </Head>
       <div className="mt-12 px-4 lg:px-0">
         <h1 className="text-center text-4xl font-bold">My Work</h1>
         <p className="text-center mt-2 text-lg max-w-3xl mx-auto">
