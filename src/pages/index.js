@@ -7,7 +7,7 @@ import waves from "../../public/waves.png";
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <div className="relative px-4 lg:px-0 mt-12">
         <div className="absolute z-10 -top-10 -left-16 lg:left-20 lg:-top-12">
           <Image src={grid} alt="grid decoration" />
@@ -39,6 +39,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

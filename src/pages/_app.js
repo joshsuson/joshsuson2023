@@ -1,5 +1,6 @@
 import { Rubik } from "next/font/google";
 import "@/styles/globals.css";
+import Layout from "@/components/Layout";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -11,7 +12,9 @@ export default function App({ Component, pageProps }) {
     <main
       className={`${rubik.variable} font-rubik  min-h-screen relative overflow-x-hidden`}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   );
 }

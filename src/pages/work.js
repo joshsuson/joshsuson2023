@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 import getAllWork from "@/utils";
 import { getPlaiceholder } from "plaiceholder";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allWork = await getAllWork();
   const workFields = allWork.map((entry) => entry.fields);
 
@@ -40,7 +40,7 @@ export async function getServerSideProps() {
 
 export default function WorkPage({ work }) {
   return (
-    <Layout>
+    <>
       <div className="mt-12 px-4 lg:px-0">
         <h1 className="text-center text-4xl font-bold">My Work</h1>
         <p className="text-center mt-2 text-lg max-w-3xl mx-auto">
@@ -55,6 +55,6 @@ export default function WorkPage({ work }) {
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
-    </Layout>
+    </>
   );
 }

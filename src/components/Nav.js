@@ -6,8 +6,8 @@ export default function Nav({ setOpen, open }) {
   const router = useRouter();
 
   function handleClick(url) {
-    setOpen(false);
     router.push(url);
+    setOpen(false);
   }
 
   return (

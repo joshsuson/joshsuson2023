@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <>
       <div className="relative my-24 px-4 lg:px-0">
         <div className="absolute z-30 -top-12 -left-12">
           <Image
@@ -56,6 +56,6 @@ export default function AboutPage() {
           </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
